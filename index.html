@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>TFG Demo</title>
+  
+  <meta name="author" content="Arnau Saumell">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="icon" type="image/png" href="images/whatever_image.jpg">
+</head>
+
+<body>
+  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tbody>
+    <tr style="padding:0px">
+      <td style="padding:0px">
+        
+        <h1 font-zie=12px>Deformable object visual perception for robotic manipulation</h1>
+        <h2 font-zie=12px>Real world experiments</h2>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+            <td style="padding:20px;width:100%;vertical-align:middle;text-align:justify">
+              <heading>Test 1: red T-shirt</heading>
+              <p>
+                This first example, shows a basic grasping motion on a selected point of the canonical shirt image. In this case, the correspondence is correctly found and the grasp is done successfully. The last part of the video shows an evaluation of the performance of the model for the given image. The estimated probability distribution clearly concentrates the mass around the right part of the shirt. However, we can see some probability being assigned to the tip of one of the sleeves, which stands for a common mode of failure (distinguishing sleeves vs torso).
+              </p>
+
+              <video style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;" controls>
+                <source src="videos/video1.mp4" type="video/mp4">
+              </video>
+            </td>
+          </tr>
+        </tbody></table>
+
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+            <td style="padding:20px;width:100%;vertical-align:middle;text-align:justify">
+              <heading>Test 2: red T-shirt - failure mode</heading>
+              <p>
+                In this second example, using the same piece of cloth than in Test 1, we can see a case of failure of our correspondence model. We can see how a point over the torso is mistaken to be the shirt neck. This clearly happens because the whole representation of the object is wrong. However, from the outputted probability distribution we can extract two interesting facts. Firstly, the second main mode over this distribution is correctly place over the shirt neck. Secondly, the distribution in this case is quite plain and spread around all the cloth. Hence, in this case, our confidence scorer would classify this prediction as a low-confident one.
+              </p>
+
+              <video style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;" controls>
+                <source src="videos/video2.mp4" type="video/mp4">
+              </video>
+            </td>
+          </tr>
+        </tbody></table>
+
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+            <td style="padding:20px;width:100%;vertical-align:middle;text-align:justify">
+              <heading>Test 3: purple jumper</heading>
+              <p>
+                In order to test the capacity of our model to generalize to other upper-body cloth instances, in this third example we are testing with a purple jumper. This case shows a nice test in which the sleeve of the cloth is correctly found and represented through our dense object descriptor representation. Hence, the predicted probability distribution correctly locates the probability mass around the tip of both sleeves. 
+              </p>
+
+              <video style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;" controls>
+                <source src="videos/video3.mp4" type="video/mp4">
+              </video>
+            </td>
+          </tr>
+        </tbody></table>
+
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+            <td style="padding:20px;width:100%;vertical-align:middle;text-align:justify">
+              <heading>Test 4: changing lightning conditions</heading>
+              <p>
+                Finally, we provide a last test to proof our model's robustness to changing lightning conditions. To do so, we take once again the red T-shirt but now apply a new lightning setup. Despite correctly finding the pixelwise correspondence for the selected pixel, our most common mode of failure reappears. Once again, as shown in the Dense Object Description of our object, the lowest part of the torso is confused to be too similar to a sleeve. However, the biggest probability mode is still predicted over the correct area of the cloth.
+              </p>
+
+              <video style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;" controls>
+                <source src="videos/video4.mp4" type="video/mp4">
+              </video>
+            </td>
+          </tr>
+        </tbody></table>
+        
+
+
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>

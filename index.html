@@ -11,12 +11,35 @@
 </head>
 
 <body>
-  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto; margin-bottom:80px;">
     <tbody>
     <tr style="padding:0px">
       <td style="padding:0px">
         
-        <h1 font-zie=12px>Deformable object visual perception for robotic manipulation</h1>
+        <h1 font-size=12px>Deformable object visual perception for robotic manipulation</h1>
+        <p style="font-size:15px; margin-bottom:30px;">
+          <i>This is a support website to provide additional graphical content for my Final Bachelor Thesis on "Deformable object visual perception for robotic manipulation". This work was elaborated in collaboration with the Massachusetts Institute of Technology (MIT) and Universitat Politècnica de Catalunya (UPC).</i>
+        </p>
+        <p>
+          <b>Abstract</b>: How can we achieve a dense characterization of a highly deformable object for robotic manipulation using visual perception? The infinite dimensional state space of deformable objects makes this task extremely difficult. Moreover, due to the nature of these objects, dealing with self-occlusions becomes a second major challenge. The frequency and complexity of these, increase with the degree of deformability of the object. Thus, it is crucial to properly deal with them. This thesis proposes a method that, by using visual perception (RGB images), (1) provides a task-agnostic dense representation of an object class, (2) enables to generalize such a representation across different instances of the same object category, and (3) provides a measure of confidence on pixelwise correspondence matching. In this particular case, the focus is on cloth manipulation, more specifically on instances of shirts. Hence, this work also provides a pipeline to generate a simulated dataset of randomized instances within this object category. However, the whole framework could be generalized to any deformable object.
+        </p>
+
+
+        <h2 font-zie=12px>Simulation dataset generation</h2>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+            <td style="padding:20px;width:100%;vertical-align:middle;text-align:justify">
+              <heading>Simulation of a hanging motion</heading>
+              <p>
+                This video shows a simulation of how the motion to create shirts hanging from a single grasping point are created. The rendering program used to create them was Blender.
+              </p>
+              <video style="width:60%; margin-left:20%; margin-right:20%;" controls>
+                <source src="videos/shirt_simulation.mp4" type="video/mp4">
+              </video>
+            </td>
+          </tr>
+        </tbody></table>
+
         <h2 font-zie=12px>Real world experiments</h2>
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
